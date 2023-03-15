@@ -333,3 +333,170 @@ function ans1()
     )
     return b;
 }
+
+//Gk
+let quiz2 =
+[
+    {
+        question: "MS-Word is an example of _____",
+        a: "An operating system",
+        b: " A processing device",
+        c: "Application software",
+        d: "An input device",
+        correct: "c"
+    },
+    {
+        question: "National Income estimates in India are prepared by",
+        a: "Planning Commission",
+        b: "Reserve Bank of India",
+        c: "Central statistical",
+        d: "Indian statistical Institute",
+        correct: "c"
+    },
+    {
+        question: "The staple food of the Vedic Aryan was",
+        a: "Barley and rice",
+        b: "Milk and its products",
+        c: "Rice and pulses",
+        d: "Vegetables and fruits",
+        correct: "b"
+    },
+    {
+        question: "The tropic of cancer does not pass through which of these Indian states ?",
+        a: "Madhya Pradesh",
+        b: "West Bengal",
+        c: "Rajasthan",
+        d: "Odisha",
+        correct: "d"
+    },
+    {
+        question: "Fathometer is used to measure",
+        a: "Earthquakes",
+        b: " Rainfall",
+        c: "Ocean depth",
+        d: "Sound intensity",
+        correct: "c"
+    },
+    {
+        question: "The purest form of iron is ",
+        a: "wrought iron",
+        b: "steel",
+        c: "pig iron",
+        d: "nickel steel",
+        correct: "a"
+    },
+    {
+        question: "The working principle of a washing machine is",
+        a: "reverse osmosis",
+        b: "diffusion",
+        c: "centrifugation",
+        d: "dialysis",
+        correct: "c"
+    },
+    {
+        question: "Who is the author of the book 'Freedom Behind Bars '",
+        a: "Kiran Bedi",
+        b: "Jawaharlal Nehru",
+        c: "Nelson Mandela",
+        d: "Sheikh Abdullah",
+        correct: "a"
+    },
+    {
+        question: "Which river of India is called Vridha Ganga?",
+        a: "Krishna",
+        b: "Godavari",
+        c: "Kaveri",
+        d: "Narmada",
+        correct: "b"
+    },
+    {
+        question: "Which latitude passes through the middle of India?",
+        a: "Equator",
+        b: "Arctic Circle",
+        c: "Tropic of Capricorn",
+        d: "Tropic of Cancer",
+        correct: "d"
+    } 
+    
+];
+let total2 = quiz2.length;
+
+let correct1 = 0;
+let wrong1 = 0; 
+let index2 = 0;
+function Gk()
+{
+    let show = document.getElementById("show");
+    let hide = document.getElementById("section");
+    let sub = document.getElementById("submit2");
+    sub.style.display = "block";
+    show.style.display = "block";
+    hide.style.display = "none";
+    Question2();
+    Question2(index2);
+}
+function Question2()
+{
+    let num2 = document.getElementById("num");
+    let t2 = document.getElementById("total");
+    let data = quiz2[index2];
+    if(total2 === index2)
+    {
+       return end2();
+    }
+    reset2();
+    console.log("hii1");
+    num2.innerText = index2+1;
+    t2.innerText = total2;
+    quenm.innerHTML = `${index2 + 1} ${data.question}`;
+    radio[0].nextElementSibling.innerText = data.a;
+    radio[1].nextElementSibling.innerText = data.b;
+    radio[2].nextElementSibling.innerText = data.c;
+    radio[3].nextElementSibling.innerText = data.d;
+}
+function end2()
+{
+    let con = document.getElementsByClassName("container")[0];
+    con.innerHTML = `
+    <div class="c1">
+        <h1>${correct1} Right From ${total2}</h1>
+    </div>
+    `;
+}
+function reset2()
+{
+    radio.forEach(
+        (input) => {
+            input.checked = false;
+        }
+    )
+}
+function Sub2()
+{
+    let data = quiz2[index2];
+    let c = ans2();
+    if( c === data.correct)
+    {
+        correct1++;
+    }
+    else
+    {
+        wrong1++;
+    }
+    index2++;
+    Question2();
+}
+function ans2()
+{
+    let c;
+    radio.forEach(
+        (input) =>
+        {
+            if(input.checked)
+            {
+                c = input.value;
+            }
+        }
+    )
+    return c;
+}
