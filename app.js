@@ -7,6 +7,7 @@ let quiz =
         c: "web browser",
         d: "empty",
         correct: "c",
+         
     },
     {
         question: "Identify the range of byte data types in JavaScript.",
@@ -39,15 +40,17 @@ let radio = document.querySelectorAll("input[type='radio']")
 let num = document.getElementById("num");
 let t = document.getElementById("total");
 let tt = quiz.length;
+let c = 0;
+let w = 0; 
 function Question()
 {
+    let data = quiz[index];
     if(tt === index)
     {
        return end();
     }
     reset();
     console.log("hii");
-    let data = quiz[index];
     num.innerText = index+1;
     t.innerText = tt;
     quenm.innerHTML = `${index + 1} ${data.question}`;
@@ -61,21 +64,45 @@ function end()
     let con = document.getElementsByClassName("container")[0];
     con.innerHTML = `
     <div class="c1">
-        <h1>Hii</h1>
+        <h1>${c} Right From ${tt}</h1>
     </div>
     `;
 }
 function reset()
 {
     radio.forEach(
-        (inputEl) => {
-            inputEl.checked = false;
+        (input) => {
+            input.checked = false;
         }
     )
 }
 function Sub()
 {
+    let data = quiz[index];
+    let a = ans();
+    if( a === data.correct)
+    {
+        c++;
+    }
+    else
+    {
+        w++;
+    }
     index++;
     Question();
+}
+function ans()
+{
+    let a;
+    radio.forEach(
+        (input) =>
+        {
+            if(input.checked)
+            {
+                a = input.value;
+            }
+        }
+    )
+    return a;
 }
 Question(index);
