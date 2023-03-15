@@ -12,35 +12,51 @@
 </head>
 
 <body>
-    <section>
-        <div class="container">
-            <div class="score"><span id="num">0</span>/<span id="total">0</span></div>
-            <form action="" id="form">
-                <div class="c1"><h1></h1></div>
-                <h1 id="quenm">This is Que</h1>
-                <div class="option">
-                    <input type="radio" name="radio" id="op1" value="a">
-                    <label for="op1">OPtion</label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="radio" id="op2" value="b">
-                    <label for="op2">OPtion</label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="radio" id="op3" value="c">
-                    <label for="op3">OPtion</label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="radio" id="op4" value="d">
-                    <label for="op4">OPtion</label>
-                </div>
-                <div class="button">
-                    <!-- <button  id="submit" onclick="Sub()">Submit</button> -->
-                    <input type="button" value="Submit" id="submit" onclick="Sub()">
-                </div>
-            </form>
-        </div>
-    </section>
+    <div id="section"  style="display: block;">
+        <div id="section1">
+        <h1>Please select Quizz</h1>
+        <input type="button" value="It" onclick="It()" class="btn">
+        <input type="button" value="Cricket" onclick="Cricket()" class="btn">
+        <input type="button" value="Gk" onclick="Gk()" class="btn">
+    </div>
+    </div>
+    <div id="show"  style="display: none;">
+        <section>
+            <div class="container">
+                <div class="score"><span id="num">0</span>/<span id="total">0</span></div>
+                <form action="" id="form">
+                  
+                    <div class="c1">
+                        <h1></h1>
+                    </div>
+                    <h1 id="quenm">This is Que</h1>
+                    <div class="option">
+                        <input type="radio" name="radio" id="op1" value="a">
+                        <label for="op1">OPtion</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="radio" id="op2" value="b">
+                        <label for="op2">OPtion</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="radio" id="op3" value="c">
+                        <label for="op3">OPtion</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="radio" id="op4" value="d">
+                        <label for="op4">OPtion</label>
+                    </div>
+                    <div class="button">
+                        <!-- <button  id="submit" onclick="Sub()">Submit</button> -->
+                        <input type="button" value="Submit" id="submit" onclick="Sub()" style="display: none;">
+                        <input type="button" value="Submit" id="submit1" onclick="Sub1()" style="display: none;">
+                        <input type="button" value="Submit" id="submit2" onclick="Sub2()" style="display: none;">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
     <script src="app.js"></script>
 </body>
 

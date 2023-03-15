@@ -17,7 +17,26 @@ section
     align-items: center;
     justify-content: center;
 }
-
+#section1
+{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(25,25,26);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn
+{
+    width: 6rem;
+    margin-top: 1rem;
+    background-color: rgb(98,100,105);
+    color: rgb(20,20,20);
+    border: none;
+    height: 1.5rem;
+    border-radius: 10px;
+}
 .container
 {
     background-color: rgb(40,40,44);
@@ -41,7 +60,9 @@ form h1
     font-size: 1.4rem;
     line-height: 2rem;
     margin-bottom: 2rem;
+
 }
+
 form .option
 {
     font-size: 1.2rem;
@@ -67,6 +88,34 @@ form .option:hover
     background-color: rgb(23,23,24);
 }
 #submit
+{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: rgb(98,100,105);
+    border: none;
+    outline: none;
+    color: rgb(20,20,20);
+    cursor: pointer;
+    transition: .3s ease background-color;
+
+}
+#submit1
+{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: rgb(98,100,105);
+    border: none;
+    outline: none;
+    color: rgb(20,20,20);
+    cursor: pointer;
+    transition: .3s ease background-color;
+
+}
+#submit2
 {
     width: 100%;
     margin-top: 20px;
